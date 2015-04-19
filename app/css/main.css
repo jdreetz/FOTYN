@@ -1,0 +1,134 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+/* Minimal Resets */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
+	text-rendering: optimizeLegibility;
+	background: #424242;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus{
+	outline: none;
+}
+
+ul{
+	list-style: none;
+}
+
+#main{
+	width: 960px;
+	height: 100%;
+	margin: auto;
+}
+
+#search{
+	width: 100%;
+	padding: 8px;
+	font-size: 2em;
+	font-weight: lighter;
+	border-radius: 0px;
+	border: none;
+	background: #5C5C5C;
+	color: white;
+}
+
+.labels{
+	width: 100%;
+	padding-top: 16px;
+	color: #BABABA;
+	float: left;
+}		
+
+.labels h2{
+	float: left;
+	font-weight: 300;
+	font-size: 1em;
+}
+
+.labels h2.title,
+.player_embed{
+	width: 740px;
+}
+
+.player_embed{
+	height: 417px;
+	float: left;
+}
+
+.related_videos{
+	width: 220px;
+	height: 417px;
+	float: left;
+	overflow: scroll;
+}
+
+.video_history{
+	width: 100%;
+	float:left;
+	overflow: scroll;
+}
+
+.related_videos li,
+.video_history li {
+	display: block;
+	cursor: pointer;
+	background-size:cover;
+	background-position: 50% 50%;
+	position: relative;
+}
+
+.related_videos li{
+	width: 100%;	
+	padding-top: 52%;
+}
+
+.related_videos li:hover {
+    box-shadow: inset 0 0 0 3px #FF9100;
+}
+
+.player_embed,
+.related_videos li,
+.video_history li {	
+	box-shadow: inset 0 0 0 1px #424242;
+}
+
+
+.video_history li{
+	width: 192px;
+	height: 103px;
+	float:left;
+}
+
+.related_videos .description{
+	position: absolute;
+	top:0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1;
+	color: white;
+	padding: 10px;
+}
+
+.related_videos .description h1 {
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    position: absolute;
+    bottom: 0;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.73);
+}
+
+.related_videos .description p {
+    font-size: 0.6em;
+    line-height: 1.2em;
+}

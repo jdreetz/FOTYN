@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="FOTYN">
+<head>
+	<title>Flight of the Youtube Navigator</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="https://www.youtube.com/iframe_api"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-youtube-mb/src/angular-youtube-embed.js"></script>
+</head>
+<body ng-controller="MainController">
+	<section id="main">
+		<input type="search" id="search" placeholder="What would you like to watch?" ng-keypress="input_update($event)" ng-model="search_terms">
+		<section class="labels">
+			<h2 class="title">{{video.title}}</h2>
+			<h2>Related</h2>
+		</section>
+		<youtube-video video-id="video.id" class="player_embed" player-vars="video.player_vars" player="mainVideo"></youtube-video>
+		<section class="related_videos">
+			<ul ng-repeat="related in video.related_videos">
+				<li ng-style="{'background-image':'url( {{related.snippet.thumbnails.high.url}} )'}" ng-click="video.update(related.id.videoId,related.snippet.title)">
+					<section class="description">
+						<h1>{{related.snippet.title}}</h1>
+					</section>
+				</li>
+			</ul>
+		</section>
+		<section class="labels" ng-show="history.length > 0">
+			<h2>History</h2>
+		</section>
+		<section class="video_history">
+			<ul ng-repeat="previous in history">
+				<li ng-style="{'background-image':'url( {{previous.img}} )'}" ng-click="history.choose($index)">
+				</li>
+			</ul>
+		</section>
+	</section>
+
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="components/YoutubeRequest.js"></script>
+	<script type="text/javascript" src="components/MainController.js"></script>
+</body>
+</html>

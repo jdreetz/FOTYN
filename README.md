@@ -1,5 +1,7 @@
 # Flight of the Youtube Navigator
 
+![alt tag](http://i.imgur.com/VxtMjVe.jpg)
+
 ### Motivation
 The purpose of this application is to provide a fast and fun way to explorer related videos within Youtube.
 

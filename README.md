@@ -3,7 +3,7 @@
 ![alt tag](http://i.imgur.com/VxtMjVe.jpg)
 
 ### Motivation
-The purpose of this application is to provide a fast and fun way to explorer related videos within Youtube.
+This application provides a fast and easy way to explore Youtube videos.
 
 ### Built With (Server)
 - [Node.JS / NPM]
